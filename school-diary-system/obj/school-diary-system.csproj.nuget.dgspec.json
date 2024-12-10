@@ -1,18 +1,19 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\RiderProjects\\school-diary-system\\school-diary-system\\school-diary-system.csproj": {}
+    "D:\\rider_projects\\school-diary-system\\school-diary-system\\school-diary-system.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\RiderProjects\\school-diary-system\\school-diary-system\\school-diary-system.csproj": {
+    "D:\\rider_projects\\school-diary-system\\school-diary-system\\school-diary-system.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\RiderProjects\\school-diary-system\\school-diary-system\\school-diary-system.csproj",
+        "projectUniqueName": "D:\\rider_projects\\school-diary-system\\school-diary-system\\school-diary-system.csproj",
         "projectName": "school-diary-system",
-        "projectPath": "C:\\Users\\user\\RiderProjects\\school-diary-system\\school-diary-system\\school-diary-system.csproj",
+        "projectPath": "D:\\rider_projects\\school-diary-system\\school-diary-system\\school-diary-system.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\RiderProjects\\school-diary-system\\school-diary-system\\obj\\",
+        "outputPath": "D:\\rider_projects\\school-diary-system\\school-diary-system\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
@@ -42,6 +43,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
