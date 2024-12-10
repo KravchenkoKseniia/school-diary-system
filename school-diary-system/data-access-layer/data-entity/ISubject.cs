@@ -1,4 +1,4 @@
-﻿namespace school_diary_system.data_entity;
+﻿namespace school_diary_system.data_access_layer.data_entity;
 using System.Text.Json;
 public interface ISubject
 {
