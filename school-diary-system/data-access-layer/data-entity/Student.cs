@@ -14,7 +14,7 @@ public class Student
     
     public Student(string name, string surname, string @class, int age, string phone)
     {
-        Id = _lastId++;
+        Id = ++_lastId;
         Name = name;
         Surname = surname;
         Class = @class;

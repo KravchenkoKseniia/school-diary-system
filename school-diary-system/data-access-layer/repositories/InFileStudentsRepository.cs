@@ -4,7 +4,7 @@ using System.Text.Json;
 
 public class InFileStudentsRepository : IStudentsRepository
 {
-    private string _filePath = "students.json";
+    private string _filePath = "D:\\rider_projects\\school-diary-system\\school-diary-system\\students.json";
     private List<Student> GetAllStudents()
     {
         if (!File.Exists(_filePath))
@@ -13,13 +13,19 @@ public class InFileStudentsRepository : IStudentsRepository
         }
         
         var jsonData = File.ReadAllText(_filePath);
-        return JsonSerializer.Deserialize<List<Student>>(jsonData) ?? [];
+
+        if (string.IsNullOrWhiteSpace(jsonData))
+        {
+            return new List<Student>();
+        }
+        
+        return JsonSerializer.Deserialize<List<Student>>(jsonData) ?? new List<Student>();
     }
     
     private void InitializeLastId()
     {
         var students = GetAllStudents();
-        var lastId = students.Max(s => s.Id);
+        var lastId = students.Count != 0 ? students.Max(s => s.Id) : 0;
         Student.GetLastId(lastId);
     }
     

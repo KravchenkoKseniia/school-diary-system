@@ -5,7 +5,7 @@ using System.Text.Json;
 
 public class InFileSubjectsRepository : ISubjectsRepository
 {
-    private string _filePath = "subjects.json";
+    private string _filePath = "D:\\rider_projects\\school-diary-system\\school-diary-system\\subjects.json";
     
     private List<Subject> GetAllSubjects()
     {
@@ -15,6 +15,12 @@ public class InFileSubjectsRepository : ISubjectsRepository
         }
         
         var jsonData = File.ReadAllText(_filePath);
+        
+        if (string.IsNullOrWhiteSpace(jsonData))
+        {
+            return new List<Subject>();
+        }
+        
         return JsonSerializer.Deserialize<List<Subject>>(jsonData) ?? [];
     }
 
